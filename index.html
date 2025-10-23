@@ -63,7 +63,7 @@
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 1.5rem;
             list-style: none;
         }
 
@@ -73,6 +73,7 @@
             font-weight: 600;
             transition: color 0.3s;
             position: relative;
+            font-size: 0.95rem;
         }
 
         .nav-links a::after {
@@ -317,6 +318,150 @@
             transform: translateY(-5px);
         }
 
+        /* MVV Section */
+        .mvv-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .mvv-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+        }
+
+        .mvv-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .mvv-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .mvv-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .mvv-card p {
+            color: var(--gray);
+        }
+
+        .mvv-card ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .mvv-card ul li {
+            padding: 0.5rem 0;
+            color: var(--gray);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .mvv-card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* Certifications */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .cert-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+            border-left: 4px solid var(--primary);
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+        }
+
+        .cert-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .cert-card .institution {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-card .year {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 2.5rem;
+            border-radius: 20px;
+            color: white;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            transition: all 0.5s;
+        }
+
+        .service-card:hover::before {
+            transform: scale(1.5);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(99, 102, 241, 0.4);
+        }
+
+        .service-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            opacity: 0.9;
+        }
+
         /* Projects */
         .projects-grid {
             display: grid;
@@ -498,7 +643,7 @@
 
             .nav-links {
                 gap: 1rem;
-                font-size: 0.9rem;
+                font-size: 0.85rem;
             }
         }
 
@@ -525,7 +670,11 @@
             <div class="logo">BM</div>
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#sobre-mi">Perfil</a></li>
+                <li><a href="#objetivos">Objetivos</a></li>
+                <li><a href="#mvv">Misión</a></li>
+                <li><a href="#certificaciones">Certificaciones</a></li>
+                <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
@@ -544,20 +693,20 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="foto-perfil.jpeg" alt="Brayan Mantilla">
+                <img src="foto-perfil.jpg" alt="Brayan Mantilla">
             </div>
         </div>
     </section>
 
-    <!-- About -->
+    <!-- About / Perfil -->
     <section id="sobre-mi">
         <div class="section-container">
-            <h2 class="section-title">Sobre Mí</h2>
+            <h2 class="section-title">Presentación de Perfil</h2>
             <p class="section-subtitle">Conoce un poco más sobre mi trayectoria y habilidades</p>
             
             <div class="about-grid">
                 <div class="about-card">
-                    <img src="foto-perfil1.jpeg" alt="Brayan Mantilla">
+                    <img src="foto-perfil.jpg" alt="Brayan Mantilla">
                     <h3>Brayan Javier Mantilla</h3>
                     <p>Ingeniero Biomédico</p>
                 </div>
@@ -589,8 +738,145 @@
         </div>
     </section>
 
+    <!-- Objetivos Profesionales -->
+    <section id="objetivos" style="background: var(--light);">
+        <div class="section-container">
+            <h2 class="section-title">Objetivos Profesionales</h2>
+            <p class="section-subtitle">Mis metas y aspiraciones en el campo profesional</p>
+            
+            <div class="mvv-grid">
+                <div class="mvv-card">
+                    <div class="icon">🎯</div>
+                    <h3>Corto Plazo</h3>
+                    <p>Consolidar mis habilidades en desarrollo de software y análisis de datos, participando en proyectos desafiantes que me permitan aplicar tecnologías modernas y contribuir al crecimiento de equipos innovadores.</p>
+                </div>
+                
+                <div class="mvv-card">
+                    <div class="icon">🚀</div>
+                    <h3>Mediano Plazo</h3>
+                    <p>Especializarme en el desarrollo de soluciones tecnológicas para el sector salud, integrando mi formación en ingeniería biomédica con mis competencias en desarrollo de software para crear herramientas que impacten positivamente en la atención médica.</p>
+                </div>
+                
+                <div class="mvv-card">
+                    <div class="icon">⭐</div>
+                    <h3>Largo Plazo</h3>
+                    <p>Liderar proyectos de innovación tecnológica en salud, gestionando equipos multidisciplinarios y contribuyendo al avance de la telemedicina y la digitalización de procesos clínicos a nivel internacional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Misión, Visión y Valores -->
+    <section id="mvv">
+        <div class="section-container">
+            <h2 class="section-title">Misión, Visión y Valores</h2>
+            <p class="section-subtitle">Los principios que guían mi desarrollo profesional</p>
+            
+            <div class="mvv-grid">
+                <div class="mvv-card">
+                    <div class="icon">🎯</div>
+                    <h3>Misión</h3>
+                    <p>Desarrollar soluciones tecnológicas innovadoras que optimicen procesos, generen valor y mejoren la calidad de vida de las personas, combinando mis conocimientos en ingeniería biomédica y desarrollo de software para crear herramientas efectivas y accesibles.</p>
+                </div>
+                
+                <div class="mvv-card">
+                    <div class="icon">🌟</div>
+                    <h3>Visión</h3>
+                    <p>Ser reconocido como un profesional referente en el desarrollo de tecnologías para el sector salud, liderando proyectos de innovación que transformen la manera en que se brinda atención médica a nivel global.</p>
+                </div>
+                
+                <div class="mvv-card">
+                    <div class="icon">💎</div>
+                    <h3>Valores</h3>
+                    <ul>
+                        <li>Innovación y creatividad</li>
+                        <li>Compromiso con la excelencia</li>
+                        <li>Aprendizaje continuo</li>
+                        <li>Trabajo en equipo</li>
+                        <li>Responsabilidad social</li>
+                        <li>Integridad y ética profesional</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificaciones -->
+    <section id="certificaciones" style="background: var(--light);">
+        <div class="section-container">
+            <h2 class="section-title">Certificaciones y Formación</h2>
+            <p class="section-subtitle">Mi trayectoria educativa y capacitaciones</p>
+            
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <h3>Diplomado en Business Intelligence y Análisis de Big Data con Power BI</h3>
+                    <p class="institution">Pontificia Universidad Javeriana Cali</p>
+                    <p class="year">2025</p>
+                </div>
+
+                <div class="cert-card">
+                    <h3>Técnico Laboral en Desarrollo de Software</h3>
+                    <p class="institution">Campuslands</p>
+                    <p class="year">2025</p>
+                </div>
+
+                <div class="cert-card">
+                    <h3>Ingeniería Biomédica</h3>
+                    <p class="institution">Universidad Autónoma de Bucaramanga</p>
+                    <p class="year">2022</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios">
+        <div class="section-container">
+            <h2 class="section-title">Servicios</h2>
+            <p class="section-subtitle">Soluciones que puedo ofrecer</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon">💻</div>
+                    <h3>Desarrollo Web</h3>
+                    <p>Creación de aplicaciones web modernas y responsivas utilizando HTML, CSS, JavaScript, React y frameworks modernos.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">📊</div>
+                    <h3>Análisis de Datos</h3>
+                    <p>Procesamiento, análisis y visualización de datos utilizando Python, SQL, Power BI y herramientas de Business Intelligence.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">🗄️</div>
+                    <h3>Desarrollo Backend</h3>
+                    <p>Desarrollo de APIs y servicios backend con Java, Spring Boot, PHP y gestión de bases de datos MySQL y MongoDB.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">🎨</div>
+                    <h3>Diseño UI/UX</h3>
+                    <p>Diseño de interfaces de usuario intuitivas y atractivas, enfocadas en la experiencia del usuario.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">⚕️</div>
+                    <h3>Soluciones en Salud</h3>
+                    <p>Desarrollo de software especializado para el sector salud, integrando tecnología biomédica y sistemas de información.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">📱</div>
+                    <h3>Consultoría Tecnológica</h3>
+                    <p>Asesoría en implementación de metodologías ágiles (Scrum, Kanban) y mejores prácticas de desarrollo de software.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Projects -->
-    <section id="proyectos">
+    <section id="proyectos" style="background: var(--light);">
         <div class="section-container">
             <h2 class="section-title">Proyectos Destacados</h2>
             <p class="section-subtitle">Algunos de los proyectos en los que he trabajado</p>
@@ -667,8 +953,8 @@
     <!-- Contact -->
     <section id="contacto" class="contact-section">
         <div class="section-container">
-            <h2 class="section-title">¿Hablamos?</h2>
-            <p class="section-subtitle">Estoy disponible para nuevos proyectos y colaboraciones</p>
+            <h2 class="section-title">Datos de Contacto</h2>
+            <p class="section-subtitle">¿Hablamos? Estoy disponible para nuevos proyectos y colaboraciones</p>
             
             <div class="contact-grid">
                 <a href="https://www.linkedin.com/in/brayan-javier-mantilla-mendoza/" target="_blank" class="contact-card">
@@ -744,7 +1030,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.project-card, .about-card, .contact-card').forEach(el => {
+        document.querySelectorAll('.project-card, .about-card, .contact-card, .mvv-card, .cert-card, .service-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'all 0.6s ease';
